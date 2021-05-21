@@ -587,6 +587,10 @@ CARD_INFO_STYLE = {
     'fontSize': 20
 }
 
+SUMMARY_STYLE = {
+    'fontSize': 14
+}
+
 # Add shadow effect to the card placeholders for charts & info cards at top
 CARD_STYLE = {
     'box-shadow': '8px 8px 8px grey',
@@ -1120,6 +1124,40 @@ content_bottom_row = dbc.Row(
 ### Bottom Row End ###
 
 
+# Summary row start
+content_summary_row = dbc.Row([
+    dbc.Col(
+        dbc.Card(
+            [
+                dbc.CardBody(
+                    [
+                        html.H4(id='summary', children=['Summary:'], className='card-title',
+                                style=CARD_TEXT_STYLE),
+                        html.P(id='summary_text_1', children="Evaluting against pay and benefits, the highest rates of attrition are seen with the lowest monthly income, lowest percent salary increase, and lowest stock option level.", style=SUMMARY_STYLE),
+
+                        html.P(id='summary_text_2', children="Evaluating against employee length of service and promotion status, the highest rates of attrition occur among employees working at the company for 4 years or less or have not received a promotion within the last 3 to 7 years.", style=SUMMARY_STYLE),
+
+                        html.P(id='summary_text_3', children="Longer commute distances are related to higher levels of attrition.", style=SUMMARY_STYLE),
+                        
+                        html.P(id='summary_text_4', children="Roles that require rare travel make up a higher rate of overall attrition than frequent or no travel. Consideration: Is rare travel too much or not enough?", style=SUMMARY_STYLE),
+
+                        html.P(id='summary_text_5', children="There is a 31% attrition rate among employees who worked ovetime, compared to 10% attrition for those who did not work overtime.", style=SUMMARY_STYLE),
+
+                        html.P(id='summary_text_6', children="Job role seems to be a factor in attrition, with Sales Representative having the highest rate of attrition at 40%, followed by Laboratory Technician at 24% and HR at 23%.", style=SUMMARY_STYLE),
+                    ]
+                )
+            ],
+            style = CARD_STYLE,
+        ),
+        md=12, style={
+            'paddingBottom': '3%'
+        }
+    ),
+
+])
+
+### Summary Row End ###
+
 # Specify page content to include in app.layout
 content = html.Div(
     [
@@ -1148,7 +1186,8 @@ content = html.Div(
         content_fifth_row,
         content_sixth_row,
         content_seventh_row,
-        content_bottom_row
+        content_bottom_row,
+        content_summary_row,
     ],
     style=CONTENT_STYLE
 )
