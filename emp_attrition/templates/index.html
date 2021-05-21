@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+<link rel="icon" type="image/png" href="../static/images/favicon-32x32.png">
+
+<script src="https://kit.fontawesome.com/00e52a2c97.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<title>Empl Attrition Analysis</title>
+</head>
+
+<body>
+
+ 
+<!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="navbar-nav">
+            
+            <span class="navbar-brand mb-0 h1">Erin Richard - Employee Attrition Analysis Project</span>
+            
+            <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+
+            <a class="nav-item nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+            </ul>
+        </div>
+    
+    </nav>
+<!-- Navbar End -->
+
+<div class="hero-image">
+<!-- Article Section Start -->
+<div class="col-md-12">
+    <!-- Column 1 is empty div for spacing -->
+    <div class="col-md-3 bottom-padding"></div>
+
+    <!-- Column 2 for article-->
+    <div class="content">
+        <article>
+            <h1>Importance of Minimizing Employee Retention</h1>
+            
+            <p>As many people know, employee turnover is an expensive and time-consuming challenge for organizations. Losing team members may negatively affect morale among remaining employees, and it often results in additional work for them, from handling former employees’ responsibilities to training replacements. Employee turnover may also affect customers if there is a negative impact to relationships or to the quality of products or service due to the loss of experienced team members.
+            </p>
+                
+            <p>In addition to the effects that losing team members may have on customers and remaining employees, it is costly to hire and train new employees. According to Work Institute’s 2017 Retention Report, the cost of hiring and training a new employee can be up to 33% of the person’s annual salary<a href="https://cdn2.hubspot.net/hubfs/478187/2017%20Retention%20Report%20Campaign/Work%20Institute%202017%20-Retention%20Report.pdf", target="_blank"> 
+            <sup>1</sup></a>, while LinkedIn reports that it could cost up to two times the person’s annual salary<a href="https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/resources/pdfs/5_employee_retention_strategies_that_work_FINAL.pdf", target="_blank"><sup>2</sup></a>. 
+            In most cases, it would be more cost effective to keep current employees engaged, satisfied, and motivated to remain as employees than it would be to hire new ones. 
+            </p>
+            
+            <p>Data scientists at IBM released a fictitious set of employee data<a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/code", target="_blank"><sup>3</sup></a> for people to perform test analyses for predicting employee attrition.
+            </p>
+            
+            <p>Recognizing the importance of keeping employees long-term, I decided to analyze the IBM data set using Pandas and Numpy. I created visualizations using Plotly Dash and integrated a Dash dashboard layout into a Flask app to allow for potential CRUD capabilities in the future. The results of my analysis are available on the Dashboard.
+            </p>
+            
+            <ol>
+            
+            <li>
+                <cite>
+                    Work Institute. <a href="https://cdn2.hubspot.net/hubfs/478187/2017%20Retention%20Report%20Campaign/Work%20Institute%202017%20-Retention%20Report.pdf", target="_blank">"2017 Retention Report.” pg. 9 </a>
+                </cite>
+            </li>
+            
+            <li>
+                <cite>
+                    LinkedIn. <a href="https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/resources/pdfs/5_employee_retention_strategies_that_work_FINAL.pdf", target="_blank">“5 Employee Retention Strategies that Work.” pg. 4</a>
+                </cite>
+            </li>
+            
+            <li>
+                <cite>
+                    IBM/Kaggle. <a href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset/code", target="_blank">“IBM HR Analytics Employee Attrition & Performance” dataset.</a>
+                </cite>
+            </li>
+            </article>
+
+
+    </div>
+
+
+
+    <!-- Column 4 is empty div for spacing -->
+    <div class="col-md-3"></div>  
+</div>
+<!-- End of Accept Payments with Ease Section -->
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

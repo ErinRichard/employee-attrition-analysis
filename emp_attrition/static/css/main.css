@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(218, 217, 217);
+    color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.60)),url(../images/pexels-fauxels-3182773.jpg);
+    background-size:cover;
+    color: #fff;
+}
+
+
+
+html{
+    height: 100%;
+}
+
+article {
+    padding: 20px;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+    background-color: white;
+    color: #000;
+    border-radius: 25px;
+}
+
+
+.shadow {
+    box-shadow: '8px 8px 8px gray'; 
+}
+
+/* .row-explore {
+    text-align: center;
+    padding-top: 3%;
+} */
+
+.content {
+    max-width: 875px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+  }
+
+  .bottom-padding{
+      padding-bottom: 5%
+  }
+
+  h1{
+      text-align: center;
+      padding-bottom: 2%
+  }
+
