@@ -15,8 +15,6 @@ app = dash.Dash(
     title='Empl Attrition Analysis', # This is the tab title
     url_base_pathname='/dashboard/')
 
-server = app.server
-
 # Helps with debugging - if dashboard doesn't spin up correctly, this should show traceback errors
 app.config['suppress_callback_exceptions']=True
 
