@@ -601,10 +601,11 @@ CARD_STYLE = {
 controls = dbc.FormGroup(
     [
         html.P('Select to update Avg Attrition vs. Commute chart:', style={
-            'paddingTop': '3%',
+            'paddingTop': '3%', 'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='commute_group_selections',
+            style={'font-size': '11px'},
             options=[{
             'label': '1 to 5 miles',
             'value': '1 to 5 miles'
