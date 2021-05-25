@@ -244,7 +244,7 @@ fig_income1a.add_annotation(
     xref='paper',
     x=0.5,
     yref='paper',
-    y=-0.35,
+    y=-0.40,
     align="center",
     )
 
@@ -375,7 +375,7 @@ fig_promotion.add_annotation(
     xref='paper',
     x=0.5,
     yref='paper',
-    y=-0.35,
+    y=-0.40,
     align="center",
     )
 ### Years Since Last Promotion vs. Attrition Line Chart End ###
@@ -417,7 +417,7 @@ fig_yrs_at_co.add_annotation(
     xref='paper',
     x=0.5,
     yref='paper',
-    y=-0.35,
+    y=-0.40,
     align="center",
     )
 
@@ -458,7 +458,7 @@ fig_current_role.add_annotation(
     xref='paper',
     x=0.5,
     yref='paper',
-    y=-0.35,
+    y=-0.40,
     align="center",
     )
 ### Years in Current Role vs. Attrition Line Chart End ###
@@ -1310,7 +1310,7 @@ def update_ot_fig(selected_ot_attribute):
         xref='paper',
         x=0.6,
         yref='paper',
-        y=-0.35,
+        y=-0.40,
         align="center",
         )
 
@@ -1388,23 +1388,27 @@ def update_commute_chart(commute_group_selected):
     fig_commute=px.histogram(commute_group_df,x='Attrition',y='CommuteGroup',color='CommuteGroup',histfunc='avg', title='Avg Rate of Attrition vs. Commute Distance', category_orders={"CommuteGroup": ["1 to 5 miles", "6 to 10 miles", "11 to 20 miles", "Over 20 miles"]})
 
     fig_commute.update_layout(
-    transition_duration=500,
-    # margin=dict(l=20, r=20, t=70, b=90),
-    paper_bgcolor="LightSteelBlue",
-    # font=dict(size=12),
-    font_color="black",
-    title_font_color="black",
-    # title_font=dict(size=16),
-    legend_title_font_color="black",
-    legend_title_text="Commute Distance",
-    title_x=0.5, #centers the chart title
-    xaxis_title="Rate of Attrition",
-    yaxis_title="Commute Distance",
-    xaxis_tickformat = '%', #Adds % sign to xaxis ticks
-    height=375,
+        transition_duration=500,
+        # margin=dict(l=20, r=20, t=70, b=90),
+        paper_bgcolor="LightSteelBlue",
+        # font=dict(size=12),
+        font_color="black",
+        title_font_color="black",
+        # title_font=dict(size=16),
+        legend_title_font_color="black",
+        legend_title_text="Commute Distance",
+        title_x=0.5, #centers the chart title
+        xaxis_title="Rate of Attrition",
+        yaxis_title="Commute Distance",
+        xaxis_tickformat = '%', #Adds % sign to xaxis ticks
+        height=375,
+        )
+
+    fig_commute.update_yaxes(
+        categoryorder='total ascending'
     )
 
-    fig_commute_note = 'Based on distance, the highest rate of attrition (21%) is for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest attrition rate (14%).'
+    fig_commute_note = 'Employees with commutes of 20 miles or more have the highest attrition rate.'
 
     fig_commute.add_annotation(
         showarrow=False,
@@ -1497,22 +1501,26 @@ def update_figure(selected_dept):
 
 
     fig100.update_layout(
-    transition_duration=500,
-    # margin=dict(l=20, r=20, t=70, b=90),
-    paper_bgcolor="LightSteelBlue",
-    # font=dict(size=12),
-    # font_family="Courier New",
-    font_color="black",
-    # title_font_family="Times New Roman",
-    title_font_color="black",
-    # title_font=dict(size=16),
-    legend_title_font_color="black",
-    title_x=0.5,
-    xaxis_tickformat = '%',
-    height=400,
+        transition_duration=500,
+        # margin=dict(l=20, r=20, t=70, b=90),
+        paper_bgcolor="LightSteelBlue",
+        # font=dict(size=12),
+        # font_family="Courier New",
+        font_color="black",
+        # title_font_family="Times New Roman",
+        title_font_color="black",
+        # title_font=dict(size=16),
+        legend_title_font_color="black",
+        title_x=0.5,
+        xaxis_tickformat = '%',
+        height=400,
     )
 
-    fig100_note = 'Although Percent Breakout by Department indicates that R&D makes up the highest percentage of all employees who have<br>left the company, the average rate of attrition within R&D independently is 14%, compared to 21% for Sales and 19% for HR.'
+    fig100.update_yaxes(
+        categoryorder='total ascending'
+    )
+
+    fig100_note = 'Although Percent Breakout by Department indicates that R&D makes up the highest percentage of all employees who have<br>left the company, the avg rate of attrition within R&D independently is 14%, compared to 21% for Sales and 19% for HR.'
 
     fig100.add_annotation(
         showarrow=False,
@@ -1712,18 +1720,22 @@ def update_figure(selected_role):
 
 
     figJobRole.update_layout(
-    transition_duration=500,
-    # margin=dict(l=20, r=20, t=70, b=90),
-    paper_bgcolor="LightSteelBlue",
-    # font=dict(size=12),
-    font_color="black",
-    title_font_color="black",
-    # title_font=dict(size=16),
-    legend_title_font_color="black",
-    title_x=0.5, #centers the chart title
-    yaxis_title="Job Role",
-    xaxis_tickformat = '%',
-    height=450
+        transition_duration=500,
+        # margin=dict(l=20, r=20, t=70, b=90),
+        paper_bgcolor="LightSteelBlue",
+        # font=dict(size=12),
+        font_color="black",
+        title_font_color="black",
+        # title_font=dict(size=16),
+        legend_title_font_color="black",
+        title_x=0.5, #centers the chart title
+        yaxis_title="Job Role",
+        xaxis_tickformat = '%',
+        height=450,
+    )
+
+    figJobRole.update_yaxes(
+        categoryorder='total ascending'
     )
 
     figJobRole_note = 'The Sales Representative Role has the highest rate of attrition at 40%, followed by Laboratory Technician at 24% and Human Resources at 23%.'
