@@ -231,6 +231,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Monthly Income",
 yaxis_title="Count",
+height=350,
 )
 
 # Footnote/caption for chart
@@ -271,7 +272,8 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Percent Salary Increase",
-yaxis_title="Count",
+yaxis_title="Count", 
+height=350,
 )
 
 # Add footnote/caption to chart
@@ -319,6 +321,7 @@ xaxis = dict(
     tick0 = 0,
     dtick = 1
     ),
+height=350,
 )
 
 # Add footnote/caption to chart
@@ -360,6 +363,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years Since Last Promotion",
 yaxis_title="Count",
+height=350,
 )
 
 # fig_promotion_note = "There is increased attrition among employees who have<br>not received a promotion in the last 3 to 7 years."
@@ -400,6 +404,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years at Company",
 yaxis_title="Count",
+height=350,
 )
 
 # Add footnote/caption to chart
@@ -441,6 +446,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years in Current Role",
 yaxis_title="Count",
+height=350,
 )
 
 # fig_current_role_note = f'Evaluating attrition against years in current role, the highest rate of attrition occurs<br>among employees working for the company for less than 1 year or around 2 years.'
@@ -476,6 +482,7 @@ title_x=0.5, #centers the chart title
 xaxis_title="Education Level",
 yaxis_title="Avg Rate of Attrition",
 yaxis_tickformat = '%',
+height=350,
 )
 
 
@@ -511,6 +518,7 @@ title_x=0.5, #centers the chart title
 xaxis_title="Field of Education",
 yaxis_title="Avg Rate of Attrition",
 yaxis_tickformat = '%',
+height=350,
 )
 
 
@@ -557,7 +565,7 @@ SIDEBAR_STYLE = {
     'bottom': 0,
     'width': '20%',
     'padding': '20px 10px',
-    'background-color': '#f8f9fa'
+    'background-color': '#f8f9fa',
 }
 
 
@@ -601,7 +609,7 @@ CARD_STYLE = {
 controls = dbc.FormGroup(
     [
         html.P('Select to update Avg Attrition vs. Commute chart:', style={
-            'font-size': '11px',
+            'font-size': '11px', 'paddingTop': '2%'
         }),
         dbc.Card([dbc.Checklist(
             id='commute_group_selections',
@@ -627,9 +635,8 @@ controls = dbc.FormGroup(
             inline=True,
         )]),
 
-        html.Br(),
         html.P('Select to update Breakout by Travel Freq chart:', style={
-            'font-size': '11px',
+            'font-size': '11px', 'padding-top': '2%'
         }),
         dbc.Card([dbc.Checklist(
             id='emp-attributes-checkbox-1',
@@ -652,9 +659,8 @@ controls = dbc.FormGroup(
         )]),
 
         
-        html.Br(),
         html.P('Select to update Avg Rate of Attrition vs. Overtime chart:' , style={
-            'font-size': '11px',
+            'font-size': '11px', 'padding-top': '2%'
         }),
         
         dbc.Card([dbc.Checklist(
@@ -674,10 +680,8 @@ controls = dbc.FormGroup(
             inline=True
         )]),
 
- 
-        html.Br(),
         html.P('Select to update Rate of Attrition by Job Role chart:', style={
-            'font-size': '11px',
+            'font-size': '11px', 'paddingTop': '2%'
         }),
         dbc.Card([dbc.Checklist(
             id='jobrole-checkboxes',
@@ -724,9 +728,8 @@ controls = dbc.FormGroup(
         )]),
         
         
-            html.Br(),
             html.P('Select to update Percent Breakout by Dept chart:', style={
-                'font-size': '11px',
+                'font-size': '11px', 'paddingTop': '2%'
         }),
         dbc.Card([dbc.Checklist(
             id='dept-pie-checkbox',
@@ -747,9 +750,9 @@ controls = dbc.FormGroup(
             value=['Human Resources', 'Research & Development', 'Sales'],
             inline=True
         )]),
-            html.Br(),
+
             html.P('Select to update Avg Rate of Attrition by Dept chart: ', style={
-             'font-size': '11px',
+             'font-size': '11px', 'paddingTop': '2%'
         }),
             dbc.Card([dbc.Checklist(
             id='dept-dropdown',
@@ -771,9 +774,8 @@ controls = dbc.FormGroup(
             inline=True
         )]),
            
-            html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Work Life Balance chart: ', style={
-            'font-size': '11px',
+            'font-size': '11px', 'paddingTop': '2%'
         }),
             dbc.Card([dbc.Checklist(
             id='work-balance-checklist',
@@ -799,9 +801,8 @@ controls = dbc.FormGroup(
             inline=True
         )]),
 
-            html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Performance Rating chart: ', style={
-            'font-size': '11px',
+            'font-size': '11px', 'paddingTop': '2%'
         }),
             dbc.Card([dbc.Checklist(
             id='perf-rating-checkbox',
@@ -819,9 +820,8 @@ controls = dbc.FormGroup(
             inline=True
         )]),
             
-            html.Br(),
             html.P('Select to update Attrition vs. Satisfaction chart: ', style={
-            'font-size': '11px'
+            'font-size': '11px', 'paddingTop': '2%'
         }),
             dbc.Card([dcc.Dropdown(
             id="satisfaction-x-axis",
@@ -871,7 +871,7 @@ content_first_row = dbc.Row([
             [
                 dbc.CardBody(
                     [
-                        html.H4(id='card_title_1', children=['Total Number of Employees:'], className='card-title',
+                        html.H5(id='card_title_1', children=['Total Number of Employees:'], className='card-title',
                                 style=CARD_TEXT_STYLE),
                         html.P(id='card_text_1', children=[df["EmployeeCount"].sum()], style=CARD_INFO_STYLE),
                     ]
@@ -889,7 +889,7 @@ content_first_row = dbc.Row([
 
                 dbc.CardBody(
                     [
-                        html.H4('Overall Percent of Attrition:', className='card-title', style=CARD_TEXT_STYLE),
+                        html.H5('Overall Percent of Attrition:', className='card-title', style=CARD_TEXT_STYLE),
                         html.P(percentage_attrition, style=CARD_INFO_STYLE),
                     ]
                 ),
@@ -923,7 +923,7 @@ content_first_row = dbc.Row([
             [
                 dbc.CardBody(
                     [
-                        html.H4('Avg Employee Yrs at Company:', className='card-title', style=CARD_TEXT_STYLE),
+                        html.H5('Avg Employee Yrs at Company:', className='card-title', style=CARD_TEXT_STYLE),
                         html.P(avg_yrs_format, style=CARD_INFO_STYLE),
                     ]
                 ),
@@ -1343,6 +1343,7 @@ def update_promotion_chart(last_promotion_selected):
     title_x=0.5, #centers the chart title
     xaxis_title="Years at Company",
     yaxis_title="Count",
+    height=350,
     )
 
     # Set variable to Total Count of 2 years in current role
