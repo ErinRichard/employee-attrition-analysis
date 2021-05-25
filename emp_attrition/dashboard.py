@@ -235,7 +235,7 @@ height=400,
 )
 
 # Footnote/caption for chart
-fig_income1a_note = 'The highest rate of attrition based on monthly income is among employees earning<br>less than $5k per month.'
+fig_income1a_note = 'The highest rate of attrition based on monthly income is<br>among employees earning less than $5k per month.'
 
 fig_income1a.add_annotation(
     showarrow=False,
@@ -1246,7 +1246,7 @@ def update_ee_fig(selected_ee_attribute):
     height=400,
     )
 
-    figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition (66%)<br>than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
+    figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition<br>(66%) than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
 
     fig_ee_attributes1.add_annotation(
         showarrow=False,
@@ -1301,7 +1301,7 @@ def update_ot_fig(selected_ot_attribute):
     height=400,
     )
 
-    fig_ot_note = 'There is a 31% average attrition rate among employees who worked overtime,<br>while there is a 10% average attrition rate among employees who did not work overtime.'
+    fig_ot_note = 'There is a 31% avg attrition rate among employees who worked OT,<br>while there is a 10% avg attrition rate among employees who did not work OT.'
 
     ot_fig.add_annotation(
         showarrow=False,
@@ -1404,7 +1404,7 @@ def update_commute_chart(commute_group_selected):
     height=400,
     )
 
-    fig_commute_note = 'Based on commute distance, the highest rate of attrition is 21% for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest average attrition rate at 14%.'
+    fig_commute_note = 'Based on commute distance, the highest rate of attrition is for commutes over 20<br>miles (21%), while commutes between 1 to 5 miles have the lowest avg attrition rate at 14%.'
 
     fig_commute.add_annotation(
         showarrow=False,
