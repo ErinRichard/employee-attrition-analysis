@@ -1404,7 +1404,7 @@ def update_commute_chart(commute_group_selected):
     height=400,
     )
 
-    fig_commute_note = 'Based on commute distance, the highest rate of attrition is for commutes over 20<br>miles (21%), while commutes between 1 to 5 miles have the lowest avg attrition rate at 14%.'
+    fig_commute_note = 'Based on commute distance, the highest rate of attrition (21%) is for commutes over 20<br>mils, while commutes between 1 to 5 miles have the lowest attrition rate at 14%.'
 
     fig_commute.add_annotation(
         showarrow=False,
