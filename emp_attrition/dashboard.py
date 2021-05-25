@@ -220,12 +220,12 @@ fig_income1a=px.line(inc_attrition,x='MonthlyIncome',y='MoIncomeCounts',color='A
 
 fig_income1a.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -234,18 +234,18 @@ yaxis_title="Count"
 )
 
 # Footnote/caption for chart
-fig_income1a_note = 'The highest rate of attrition based on monthly income is<br>among employees earning less than $5k per month.'
+# fig_income1a_note = 'The highest rate of attrition based on monthly income is<br>among employees earning less than $5k per month.'
 
-fig_income1a.add_annotation(
-    showarrow=False,
-    text=fig_income1a_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_income1a.add_annotation(
+#     showarrow=False,
+#     text=fig_income1a_note,
+#     font=dict(size=9), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### End of Monthly Income vs. Attrition Line Chart ###
 
@@ -261,12 +261,12 @@ fig_percent_salary_increase=px.line(df_percent_salary_increase,x='PercentSalaryH
 
 fig_percent_salary_increase.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -275,18 +275,18 @@ yaxis_title="Count"
 )
 
 # Add footnote/caption to chart
-fig_percent_salary_increase_note = "Higher attrition rates are associated with lower percent salary increases."
+# fig_percent_salary_increase_note = "Higher attrition rates are associated with lower percent salary increases."
 
-fig_percent_salary_increase.add_annotation(
-    showarrow=False,
-    text=fig_percent_salary_increase_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_percent_salary_increase.add_annotation(
+#     showarrow=False,
+#     text=fig_percent_salary_increase_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### End of Percent Salary Increase vs. Attrition Line Chart ###
 
@@ -302,12 +302,12 @@ fig_stock_options=px.line(df_stock_options,x='StockOptionLevel',y='Count',color=
 
 fig_stock_options.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
 font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -322,18 +322,18 @@ xaxis = dict(
 )
 
 # Add footnote/caption to chart
-fig_stock_options_note = "Higher attrition rates are associated with lower stock option levels."
+# fig_stock_options_note = "Higher attrition rates are associated with lower stock option levels."
 
-fig_stock_options.add_annotation(
-    showarrow=False,
-    text=fig_stock_options_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_stock_options.add_annotation(
+#     showarrow=False,
+#     text=fig_stock_options_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### End of Stock Options vs. Attrition Line Chart ###
 
@@ -349,12 +349,12 @@ fig_promotion=px.line(df_promotion,x='YearsSinceLastPromotion',y='Count',color='
 
 fig_promotion.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -362,18 +362,18 @@ xaxis_title="Years Since Last Promotion",
 yaxis_title="Count"
 )
 
-fig_promotion_note = "There is increased attrition among employees who have<br>not received a promotion in the last 3 to 7 years."
+# fig_promotion_note = "There is increased attrition among employees who have<br>not received a promotion in the last 3 to 7 years."
 
-fig_promotion.add_annotation(
-    showarrow=False,
-    text=fig_promotion_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_promotion.add_annotation(
+#     showarrow=False,
+#     text=fig_promotion_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 ### Years Since Last Promotion vs. Attrition Line Chart End ###
 
 
@@ -389,12 +389,12 @@ fig_yrs_at_co=px.line(df_yrs_at_co,x='YearsAtCompany',y='Count',color='Attrition
 
 fig_yrs_at_co.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -403,18 +403,18 @@ yaxis_title="Count"
 )
 
 # Add footnote/caption to chart
-fig_yrs_at_co_note = "Evaluating attrition against years at the company, the highest rate<br>of attrition occurs within the first four years of employment."
+# fig_yrs_at_co_note = "Evaluating attrition against years at the company, the highest rate<br>of attrition occurs within the first four years of employment."
 
-fig_yrs_at_co.add_annotation(
-    showarrow=False,
-    text=fig_yrs_at_co_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_yrs_at_co.add_annotation(
+#     showarrow=False,
+#     text=fig_yrs_at_co_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### Years at Company vs. Attrition Line Chart End ###
 
@@ -430,12 +430,12 @@ fig_current_role=px.line(df_current_role,x='YearsInCurrentRole',y='Count',color=
 
 fig_current_role.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
@@ -443,18 +443,18 @@ xaxis_title="Years in Current Role",
 yaxis_title="Count"
 )
 
-fig_current_role_note = f'Evaluating attrition against years in current role, the highest rate of attrition occurs<br>among employees working for the company for less than 1 year or around 2 years.'
+# fig_current_role_note = f'Evaluating attrition against years in current role, the highest rate of attrition occurs<br>among employees working for the company for less than 1 year or around 2 years.'
 
-fig_current_role.add_annotation(
-    showarrow=False,
-    text=fig_current_role_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_current_role.add_annotation(
+#     showarrow=False,
+#     text=fig_current_role_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 ### Years in Current Role vs. Attrition Line Chart End ###
 
 
@@ -465,12 +465,12 @@ fig_gender_ed_level=px.histogram(df_educ,x='Education',y='Attrition',color='Gend
 
 fig_gender_ed_level.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 title_x=0.5, #centers the chart title
 xaxis_title="Education Level",
@@ -479,18 +479,18 @@ yaxis_tickformat = '%',
 )
 
 
-fig_gender_ed_level_note = "Comparing rate of attrition against gender and level of education, the highest rate of attrition among women are those with an education level below college (18%). The highest rate of attrition among men are those with education levels below college and bachelor (both 18%)."
+# fig_gender_ed_level_note = "Comparing rate of attrition against gender and level of education, the highest rate of attrition among women are those with an education level below college (18%). The highest rate of attrition among men are those with education levels below college and bachelor (both 18%)."
 
-fig_gender_ed_level.add_annotation(
-    showarrow=False,
-    text=fig_gender_ed_level_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_gender_ed_level.add_annotation(
+#     showarrow=False,
+#     text=fig_gender_ed_level_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### End of Stacked Bar - Gender & Education Level ###
 
@@ -500,12 +500,12 @@ fig_gender_ed_field=px.histogram(df_trvl,x='EducationField',y='Attrition',color=
 
 fig_gender_ed_field.update_layout(
 transition_duration=500,
-margin=dict(l=20, r=20, t=70, b=90),
+# margin=dict(l=20, r=20, t=70, b=90),
 paper_bgcolor="LightSteelBlue",
-font=dict(size=12),
+# font=dict(size=12),
 font_color="black",
 title_font_color="black",
-title_font=dict(size=16),
+# title_font=dict(size=16),
 legend_title_font_color="black",
 title_x=0.5, #centers the chart title
 xaxis_title="Field of Education",
@@ -514,18 +514,18 @@ yaxis_tickformat = '%',
 )
 
 
-fig_gender_ed_field_note = "Comparing rate of attrition against gender and field of education, the highest rate of attrition among women are those with education in HR (38%). The highest rate of attrition among men are those with a Technical Degree (28%)."
+# fig_gender_ed_field_note = "Comparing rate of attrition against gender and field of education, the highest rate of attrition among women are those with education in HR (38%). The highest rate of attrition among men are those with a Technical Degree (28%)."
 
-fig_gender_ed_field.add_annotation(
-    showarrow=False,
-    text=fig_gender_ed_field_note,
-    font=dict(size=11), 
-    xref='paper',
-    x=0.5,
-    yref='paper',
-    y=-0.30,
-    align="center",
-    )
+# fig_gender_ed_field.add_annotation(
+#     showarrow=False,
+#     text=fig_gender_ed_field_note,
+#     font=dict(size=11), 
+#     xref='paper',
+#     x=0.5,
+#     yref='paper',
+#     y=-0.30,
+#     align="center",
+#     )
 
 ### End of Stacked Bar - Gender & Education Level ###
 
@@ -1224,29 +1224,29 @@ def update_ee_fig(selected_ee_attribute):
 
     fig_ee_attributes1.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     legend_title_text="Travel Frequency",
     title_x=0.5, #centers the chart title
     )
 
-    figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition<br>(66%) than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
+    # figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition<br>(66%) than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
 
-    fig_ee_attributes1.add_annotation(
-        showarrow=False,
-        text=figJobTravel_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.6,
-        yref='paper',
-        y=-0.30,
-        align="center"
-        )
+    # fig_ee_attributes1.add_annotation(
+    #     showarrow=False,
+    #     text=figJobTravel_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.6,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align="center"
+    #     )
 
     return fig_ee_attributes1
 
@@ -1276,12 +1276,12 @@ def update_ot_fig(selected_ot_attribute):
 
     ot_fig.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     legend_title_text="Overtime Required",
     title_x=0.5, #centers the chart title
@@ -1289,18 +1289,18 @@ def update_ot_fig(selected_ot_attribute):
     yaxis_tickformat = '%',
     )
 
-    fig_ot_note = 'There is a 31% average attrition rate among employees who worked overtime,<br>while there is a 10% average attrition rate among employees who did not work overtime.'
+    # fig_ot_note = 'There is a 31% average attrition rate among employees who worked overtime,<br>while there is a 10% average attrition rate among employees who did not work overtime.'
 
-    ot_fig.add_annotation(
-        showarrow=False,
-        text=fig_ot_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.6,
-        yref='paper',
-        y=-0.30,
-        align="center",
-        )
+    # ot_fig.add_annotation(
+    #     showarrow=False,
+    #     text=fig_ot_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.6,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align="center",
+    #     )
 
     return ot_fig
 
@@ -1375,12 +1375,12 @@ def update_commute_chart(commute_group_selected):
 
     fig_commute.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     legend_title_text="Commute Distance",
     title_x=0.5, #centers the chart title
@@ -1389,18 +1389,18 @@ def update_commute_chart(commute_group_selected):
     xaxis_tickformat = '%', #Adds % sign to xaxis ticks
     )
 
-    fig_commute_note = 'Based on commute distance, the highest rate of attrition is 21% for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest average attrition rate at 14%.'
+    # fig_commute_note = 'Based on commute distance, the highest rate of attrition is 21% for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest average attrition rate at 14%.'
 
-    fig_commute.add_annotation(
-        showarrow=False,
-        text=fig_commute_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.55,
-        yref='paper',
-        y=-0.30,
-        align="center",
-        )
+    # fig_commute.add_annotation(
+    #     showarrow=False,
+    #     text=fig_commute_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.55,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align="center",
+    #     )
 
     return fig_commute
 
@@ -1428,12 +1428,12 @@ def display_area(x):
         'duration': 500,
         'easing': 'cubic-in-out',
     },
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     legend_title_text="Attrition",
     title_x=0.5, #centers the chart title
@@ -1482,31 +1482,31 @@ def update_figure(selected_dept):
 
     fig100.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     # font_family="Courier New",
     font_color="black",
     # title_font_family="Times New Roman",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     title_x=0.5,
     xaxis_tickformat = '%',
     )
 
-    fig100_note = 'Although Percent Breakout by Department indicates that R&D makes up the highest percentage of all employees who have<br>left the company, the average rate of attrition within R&D independently is 14%, compared to 21% for Sales and 19% for HR.'
+    # fig100_note = 'Although Percent Breakout by Department indicates that R&D makes up the highest percentage of all employees who have<br>left the company, the average rate of attrition within R&D independently is 14%, compared to 21% for Sales and 19% for HR.'
 
-    fig100.add_annotation(
-        showarrow=False,
-        text=fig100_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.5,
-        yref='paper',
-        y=-0.30,
-        align="center"
-        )
+    # fig100.add_annotation(
+    #     showarrow=False,
+    #     text=fig100_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.5,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align="center"
+    #     )
 
     return fig100
 
@@ -1538,32 +1538,32 @@ def update_pie(dept_selection):
         title=f"Total Attrition - Percent Breakout by Department (n={attrition_yes_count})")
    
     fig200.update_layout(
-        margin=dict(l=70, r=70, t=70, b=90),
+        # margin=dict(l=70, r=70, t=70, b=90),
         paper_bgcolor="LightSteelBlue",
-        font=dict(size=12),
+        # font=dict(size=12),
         # font_family="Courier New",
         font_color="black",
         # title_font_family="Times New Roman",
         title_font_color="black",
-        title_font=dict(size=16),
+        # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Department",
         title_x=0.5
     )
 
     # This adds annotation/caption to the chart
-    fig200_note = 'R&D is the largest department, with 65% of all employees, so it stands to reason<br>that the highest percentage of employees leaving would come from the largest department.'
+    # fig200_note = 'R&D is the largest department, with 65% of all employees, so it stands to reason<br>that the highest percentage of employees leaving would come from the largest department.'
 
-    fig200.add_annotation(
-        showarrow=False,
-        text=fig200_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.5,
-        yref='paper',
-        y=-0.30,
-        align = "center",
-        )
+    # fig200.add_annotation(
+    #     showarrow=False,
+    #     text=fig200_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.5,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align = "center",
+    #     )
 
     return fig200
 
@@ -1590,32 +1590,32 @@ def update_pie(work_balance_selection):
     fig_work_bal = px.pie(work_life_bal_df, values='Attrition', names='WorkLifeBalance',color="WorkLifeBalance", title=f"Total Attrition - Percent Breakout by Work Life Balance Rating (n={attrition_yes_count})")
    
     fig_work_bal.update_layout(
-        margin=dict(l=70, r=70, t=70, b=90),
+        # margin=dict(l=70, r=70, t=70, b=90),
         paper_bgcolor="LightSteelBlue",
-        font=dict(size=12),
+        # font=dict(size=12),
         # font_family="Courier New",
         font_color="black",
         # title_font_family="Times New Roman",
         title_font_color="black",
-        title_font=dict(size=16),
+        # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Work Life Balance Rating",
         title_x=0.5
     )
 
     # This adds annotation/caption to the chart
-    fig_work_bal_note = 'The highest rate of attrition comes from people who rated the work life balance as "Good" (3) out of a 4-point scale.'
+    # fig_work_bal_note = 'The highest rate of attrition comes from people who rated the work life balance as "Good" (3) out of a 4-point scale.'
 
-    fig_work_bal.add_annotation(
-        showarrow=False,
-        text=fig_work_bal_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.5,
-        yref='paper',
-        y=-0.30,
-        align = "center",
-        )
+    # fig_work_bal.add_annotation(
+    #     showarrow=False,
+    #     text=fig_work_bal_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.5,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align = "center",
+    #     )
 
     return fig_work_bal
 
@@ -1642,32 +1642,32 @@ def update_pie(perf_rating_selection):
     fig_perf_rating = px.pie(performance_df, values='Attrition', names='PerformanceRating',color="PerformanceRating", title=f"Total Attrition - Percent Breakout by Performance Rating (n={attrition_yes_count})")
    
     fig_perf_rating.update_layout(
-        margin=dict(l=70, r=70, t=70, b=90),
+        # margin=dict(l=70, r=70, t=70, b=90),
         paper_bgcolor="LightSteelBlue",
-        font=dict(size=12),
+        # font=dict(size=12),
         # font_family="Courier New",
         font_color="black",
         # title_font_family="Times New Roman",
         title_font_color="black",
-        title_font=dict(size=16),
+        # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Performance Rating",
         title_x=0.5
     )
 
     # This adds annotation/caption to the chart
-    fig_perf_rating_note = 'All employees received performance ratings of Excellent (3) or Outstanding (4)<br>out of a 4-point scale. Of employees who left the company, 84% received an "Excellent" rating.'
+    # fig_perf_rating_note = 'All employees received performance ratings of Excellent (3) or Outstanding (4)<br>out of a 4-point scale. Of employees who left the company, 84% received an "Excellent" rating.'
 
-    fig_perf_rating.add_annotation(
-        showarrow=False,
-        text=fig_perf_rating_note,
-        font=dict(size=11), 
-        xref='paper',
-        x=0.5,
-        yref='paper',
-        y=-0.30,
-        align = "center",
-        )
+    # fig_perf_rating.add_annotation(
+    #     showarrow=False,
+    #     text=fig_perf_rating_note,
+    #     font=dict(size=11), 
+    #     xref='paper',
+    #     x=0.5,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align = "center",
+    #     )
 
     return fig_perf_rating
 
@@ -1693,30 +1693,30 @@ def update_figure(selected_role):
 
     figJobRole.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     title_x=0.5, #centers the chart title
     yaxis_title="Job Role",
     xaxis_tickformat = '%',    
     )
 
-    figJobRole_note = 'The Sales Representative Role has the highest rate of attrition at 40%, followed by Laboratory Technician at 24% and Human Resources at 23%.'
+    # figJobRole_note = 'The Sales Representative Role has the highest rate of attrition at 40%, followed by Laboratory Technician at 24% and Human Resources at 23%.'
 
-    figJobRole.add_annotation(
-        showarrow=False,
-        text=figJobRole_note,
-        font=dict(size=12), 
-        xref='paper',
-        x=0.5,
-        yref='paper',
-        y=-0.30,
-        align="center"
-        )
+    # figJobRole.add_annotation(
+    #     showarrow=False,
+    #     text=figJobRole_note,
+    #     font=dict(size=12), 
+    #     xref='paper',
+    #     x=0.5,
+    #     yref='paper',
+    #     y=-0.30,
+    #     align="center"
+    #     )
 
     return figJobRole
 
