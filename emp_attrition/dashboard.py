@@ -601,7 +601,7 @@ CARD_STYLE = {
 controls = dbc.FormGroup(
     [
         html.P('Select to update Avg Attrition vs. Commute chart:', style={
-            'paddingTop': '1%', 'font-size': '11px',
+            'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='commute_group_selections',
@@ -629,7 +629,7 @@ controls = dbc.FormGroup(
 
         html.Br(),
         html.P('Select to update Breakout by Travel Freq chart:', style={
-            'paddingTop': '1%', 'font-size': '11px',
+            'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='emp-attributes-checkbox-1',
@@ -654,7 +654,6 @@ controls = dbc.FormGroup(
         
         html.Br(),
         html.P('Select to update Avg Rate of Attrition vs. Overtime chart:' , style={
-            'paddingTop': '1%',
             'font-size': '11px',
         }),
         
@@ -678,7 +677,7 @@ controls = dbc.FormGroup(
  
         html.Br(),
         html.P('Select to update Rate of Attrition by Job Role chart:', style={
-            'paddingTop': '1%', 'font-size': '11px',
+            'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='jobrole-checkboxes',
@@ -727,7 +726,7 @@ controls = dbc.FormGroup(
         
             html.Br(),
             html.P('Select to update Percent Breakout by Dept chart:', style={
-            'paddingTop': '1%', 'font-size': '11px',
+                'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='dept-pie-checkbox',
@@ -750,8 +749,7 @@ controls = dbc.FormGroup(
         )]),
             html.Br(),
             html.P('Select to update Avg Rate of Attrition by Dept chart: ', style={
-            'paddingTop': '1%',
-            'font-size': '11px',
+             'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
             id='dept-dropdown',
@@ -775,7 +773,6 @@ controls = dbc.FormGroup(
            
             html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Work Life Balance chart: ', style={
-            'paddingTop': '1%',
             'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
@@ -804,7 +801,6 @@ controls = dbc.FormGroup(
 
             html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Performance Rating chart: ', style={
-            'paddingTop': '1%',
             'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
@@ -825,7 +821,6 @@ controls = dbc.FormGroup(
             
             html.Br(),
             html.P('Select to update Attrition vs. Satisfaction chart: ', style={
-            'paddingTop': '1%',
             'font-size': '11px'
         }),
             dbc.Card([dcc.Dropdown(
