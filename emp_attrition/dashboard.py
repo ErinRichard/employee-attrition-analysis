@@ -577,18 +577,18 @@ TEXT_STYLE = {
 CARD_TEXT_STYLE = {
     'textAlign': 'center',
     'color': '#0074D9',
-    'fontSize': 25
+    # 'fontSize': 25
 }
 
 
 CARD_INFO_STYLE = {
     'textAlign': 'center',
     'color': '#0074D9',
-    'fontSize': 20
+    # 'fontSize': 20
 }
 
 SUMMARY_STYLE = {
-    'fontSize': 14
+    # 'fontSize': 14
 }
 
 # Add shadow effect to the card placeholders for charts & info cards at top
@@ -628,10 +628,12 @@ controls = dbc.FormGroup(
         )]),
 
         html.Br(),
-        html.P('Select to update Breakout by Travel Freq chart:'),
-        
+        html.P('Select to update Breakout by Travel Freq chart:', style={
+            'paddingTop': '3%', 'font-size': '11px',
+        }),
         dbc.Card([dbc.Checklist(
             id='emp-attributes-checkbox-1',
+            style={'font-size': '11px'},
             options=[{
             'label': 'No Travel',
             'value': 'Non-Travel'
@@ -651,12 +653,14 @@ controls = dbc.FormGroup(
 
         
         html.Br(),
-        html.P('Select to update Avg Rate of Attrition vs. Overtime chart:', style={
+        html.P('Select to update Avg Rate of Attrition vs. Overtime chart:' , style={
             'paddingTop': '3%',
+            'font-size': '11px',
         }),
         
         dbc.Card([dbc.Checklist(
             id='ot-checkbox-1',
+            style={'font-size': '11px'},
             options=[{
             'label': 'Yes',
             'value': 'Yes'
@@ -674,10 +678,11 @@ controls = dbc.FormGroup(
  
         html.Br(),
         html.P('Select to update Rate of Attrition by Job Role chart:', style={
-            'paddingTop': '3%',
+            'paddingTop': '3%', 'font-size': '11px',
         }),
         dbc.Card([dbc.Checklist(
             id='jobrole-checkboxes',
+            style={'font-size': '11px'},
             options=[{
                 'label': 'Healthcare Rep',
                 'value': 'Healthcare Representative'
@@ -726,6 +731,7 @@ controls = dbc.FormGroup(
         }),
         dbc.Card([dbc.Checklist(
             id='dept-pie-checkbox',
+            style={'font-size': '11px'},
             options=[{
                 'label': 'HR',
                 'value': 'Human Resources'
@@ -745,9 +751,11 @@ controls = dbc.FormGroup(
             html.Br(),
             html.P('Select to update Avg Rate of Attrition by Dept chart: ', style={
             'paddingTop': '3%',
+            'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
             id='dept-dropdown',
+            style={'font-size': '11px'},
             options=[{
                 'label': 'HR',
                 'value': 'Human Resources'
@@ -768,9 +776,11 @@ controls = dbc.FormGroup(
             html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Work Life Balance chart: ', style={
             'paddingTop': '3%',
+            'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
             id='work-balance-checklist',
+            style={'font-size': '11px'},
             options=[{
                     'label': 'Bad (1)',
                     'value': 'Bad'
@@ -795,9 +805,11 @@ controls = dbc.FormGroup(
             html.Br(),
             html.P('Select to update Avg Rate of Attrition vs. Performance Rating chart: ', style={
             'paddingTop': '3%',
+            'font-size': '11px',
         }),
             dbc.Card([dbc.Checklist(
             id='perf-rating-checkbox',
+            style={'font-size': '11px'},
             options=[{
                     'label': 'Excellent (3)',
                     'value': 'Excellent'
@@ -814,9 +826,11 @@ controls = dbc.FormGroup(
             html.Br(),
             html.P('Select to update Attrition vs. Satisfaction chart: ', style={
             'paddingTop': '3%',
+            'font-size': '11px'
         }),
             dbc.Card([dcc.Dropdown(
             id="satisfaction-x-axis",
+            style={'font-size': '11px'},
             options=[{
                 'label': 'Environment Satisfaction',
                 'value': 'Environment Satisfaction'
