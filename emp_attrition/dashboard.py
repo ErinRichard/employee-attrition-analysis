@@ -231,7 +231,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Monthly Income",
 yaxis_title="Count",
-height=400,
+height=375,
 )
 
 # Footnote/caption for chart
@@ -273,7 +273,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Percent Salary Increase",
 yaxis_title="Count", 
-height=400,
+height=375,
 )
 
 # Add footnote/caption to chart
@@ -321,7 +321,7 @@ xaxis = dict(
     tick0 = 0,
     dtick = 1
     ),
-height=400,
+height=375,
 )
 
 # Add footnote/caption to chart
@@ -363,7 +363,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years Since Last Promotion",
 yaxis_title="Count",
-height=400,
+height=375,
 )
 
 fig_promotion_note = "There is increased attrition among employees who have not<br>received a promotion in the last 3 to 7 years."
@@ -404,7 +404,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years at Company",
 yaxis_title="Count",
-height=400,
+height=375,
 )
 
 # Add footnote/caption to chart
@@ -446,7 +446,7 @@ legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years in Current Role",
 yaxis_title="Count",
-height=400,
+height=375,
 )
 
 fig_current_role_note = f'Evaluating against yrs in current role, the highest rate of attrition occurs in<br>employees working for the co. less than 1 yr or around 2 yrs.'
@@ -1243,7 +1243,7 @@ def update_ee_fig(selected_ee_attribute):
     legend_title_font_color="black",
     legend_title_text="Travel Frequency",
     title_x=0.5, #centers the chart title
-    height=400,
+    height=375,
     )
 
     figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition<br>(66%) than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
@@ -1298,7 +1298,7 @@ def update_ot_fig(selected_ot_attribute):
     title_x=0.5, #centers the chart title
     xaxis_title="Overtime Required",
     yaxis_tickformat = '%',
-    height=400,
+    height=375,
     )
 
     fig_ot_note = 'There is a 31% avg attrition rate among employees who worked OT,<br>while there is a 10% avg attrition rate among employees who did not work OT.'
@@ -1343,7 +1343,7 @@ def update_promotion_chart(last_promotion_selected):
     title_x=0.5, #centers the chart title
     xaxis_title="Years at Company",
     yaxis_title="Count",
-    height=400,
+    height=375,
     )
 
     # Set variable to Total Count of 2 years in current role
@@ -1401,10 +1401,10 @@ def update_commute_chart(commute_group_selected):
     xaxis_title="Rate of Attrition",
     yaxis_title="Commute Distance",
     xaxis_tickformat = '%', #Adds % sign to xaxis ticks
-    height=400,
+    height=375,
     )
 
-    fig_commute_note = 'Based on commute distance, the highest rate of attrition (21%) is for commutes over 20<br>mils, while commutes between 1 to 5 miles have the lowest attrition rate at 14%.'
+    fig_commute_note = 'Based on distance, the highest rate of attrition (21%) is for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest attrition rate (14%).'
 
     fig_commute.add_annotation(
         showarrow=False,
