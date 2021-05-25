@@ -235,7 +235,7 @@ height=400,
 )
 
 # Footnote/caption for chart
-fig_income1a_note = 'The highest rate of attrition based on monthly income is among employees earning less than $5k per month.'
+fig_income1a_note = 'The highest rate of attrition based on monthly income is among employees earning<br>less than $5k per month.'
 
 fig_income1a.add_annotation(
     showarrow=False,
@@ -366,7 +366,7 @@ yaxis_title="Count",
 height=400,
 )
 
-fig_promotion_note = "There is increased attrition among employees who have not received a promotion in the last 3 to 7 years."
+fig_promotion_note = "There is increased attrition among employees who have not<br>received a promotion in the last 3 to 7 years."
 
 fig_promotion.add_annotation(
     showarrow=False,
@@ -408,7 +408,7 @@ height=400,
 )
 
 # Add footnote/caption to chart
-fig_yrs_at_co_note = "Evaluating against years at the company, the highest rate of attrition occurs within the first four years of employment."
+fig_yrs_at_co_note = "Evaluating against years at the company, the highest rate of attrition occurs<br>within the first four years of employment."
 
 fig_yrs_at_co.add_annotation(
     showarrow=False,
@@ -486,7 +486,7 @@ height=450,
 )
 
 
-fig_gender_ed_level_note = "Comparing rate of attrition against gender and level of education, the highest rate of attrition among women are those with an education level below college (18%). The highest rate of attrition among men are those with education levels below college and bachelor (both 18%)."
+fig_gender_ed_level_note = "Comparing rate of attrition against gender and level of education, the highest rate of attrition among women are those with an education level below college (18%). The highest rate of attrition among men are those with education levels below college & bachelor (both 18%)."
 
 fig_gender_ed_level.add_annotation(
     showarrow=False,
@@ -1623,7 +1623,7 @@ def update_pie(work_balance_selection):
     )
 
     # This adds annotation/caption to the chart
-    fig_work_bal_note = 'The highest rate of attrition comes from people who rated the work life balance as "Good" (3) out of a 4-point scale.'
+    fig_work_bal_note = 'The highest rate of attrition comes from people who rated the work life balance<br>as "Good" (3) out of a 4-point scale.'
 
     fig_work_bal.add_annotation(
         showarrow=False,
