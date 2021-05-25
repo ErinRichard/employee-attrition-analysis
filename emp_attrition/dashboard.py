@@ -230,7 +230,7 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Monthly Income",
-yaxis_title="Count"
+yaxis_title="Count",
 )
 
 # Footnote/caption for chart
@@ -271,7 +271,7 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Percent Salary Increase",
-yaxis_title="Count"
+yaxis_title="Count",
 )
 
 # Add footnote/caption to chart
@@ -318,7 +318,7 @@ xaxis = dict(
     tickmode = 'linear',
     tick0 = 0,
     dtick = 1
-    )
+    ),
 )
 
 # Add footnote/caption to chart
@@ -359,7 +359,7 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years Since Last Promotion",
-yaxis_title="Count"
+yaxis_title="Count",
 )
 
 # fig_promotion_note = "There is increased attrition among employees who have<br>not received a promotion in the last 3 to 7 years."
@@ -399,7 +399,7 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years at Company",
-yaxis_title="Count"
+yaxis_title="Count",
 )
 
 # Add footnote/caption to chart
@@ -440,7 +440,7 @@ legend_title_font_color="black",
 legend_title_text="Attrition",
 title_x=0.5, #centers the chart title
 xaxis_title="Years in Current Role",
-yaxis_title="Count"
+yaxis_title="Count",
 )
 
 # fig_current_role_note = f'Evaluating attrition against years in current role, the highest rate of attrition occurs<br>among employees working for the company for less than 1 year or around 2 years.'
@@ -923,7 +923,7 @@ content_first_row = dbc.Row([
             [
                 dbc.CardBody(
                     [
-                        html.H4('Average Employee Yrs at Company:', className='card-title', style=CARD_TEXT_STYLE),
+                        html.H4('Avg Employee Yrs at Company:', className='card-title', style=CARD_TEXT_STYLE),
                         html.P(avg_yrs_format, style=CARD_INFO_STYLE),
                     ]
                 ),
@@ -1046,7 +1046,7 @@ content_row_4a = dbc.Row(
         # Stacked Bar Chart - Avg Rate of Attrition by Gender & Educ Field
         dbc.Col(
             dcc.Graph(id='fig_gender_ed_field', figure=fig_gender_ed_field, style=CARD_STYLE), md=12, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%', 
         }
         )
         
@@ -1062,7 +1062,7 @@ content_fifth_row = dbc.Row(
         # Horiz. bar chart of Avg Rate of Attrition by Job Role
         dbc.Col(
             dcc.Graph(id='chart-jobrole-checkbox', style=CARD_STYLE), md=12, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%', 
         }
         )
         
@@ -1078,14 +1078,14 @@ content_sixth_row = dbc.Row(
         # Pie Chart of Attrition percentage breakout by Dept
         dbc.Col(
             dcc.Graph(id='dept_pct_pie', style = CARD_STYLE), md=6, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%',
         }
         ),
         
         # Horiz. bar chart of avg rate of attrition by Dept
         dbc.Col(
             dcc.Graph(id='chart-with-dropdown', style = CARD_STYLE), md=6, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%',
         }
         
         )
@@ -1101,14 +1101,14 @@ content_seventh_row = dbc.Row(
         # Pie Chart of Attrition breakout based on WorkLifeBalance
         dbc.Col(
             dcc.Graph(id='work_balance_pie', style = CARD_STYLE), md=6, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%',
         }
         ),
         
         # Pie Chart of Attrition breakout based on Performance Rating
         dbc.Col(
             dcc.Graph(id='perf_rating_pie', style = CARD_STYLE), md=6, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%',
         }
         
         )
@@ -1124,7 +1124,7 @@ content_bottom_row = dbc.Row(
         # Horiz. bar chart of Avg Rate of Attrition by Job Role
         dbc.Col(
             dcc.Graph(id='satisfaction_area_chart', style=CARD_STYLE), md=12, style={
-            'paddingBottom': '3%'
+            'paddingBottom': '3%', 
         }
         )
         
@@ -1243,6 +1243,7 @@ def update_ee_fig(selected_ee_attribute):
     legend_title_font_color="black",
     legend_title_text="Travel Frequency",
     title_x=0.5, #centers the chart title
+    height=350,
     )
 
     # figJobTravel_note = 'Job Roles with Rare Travel make up a higher rate of overall attrition<br>(66%) than roles with Frequent Travel (29%) or No Travel (5%).<br>Consideration: Is rare travel too much travel or not enough?'
@@ -1297,6 +1298,7 @@ def update_ot_fig(selected_ot_attribute):
     title_x=0.5, #centers the chart title
     xaxis_title="Overtime Required",
     yaxis_tickformat = '%',
+    height=350,
     )
 
     # fig_ot_note = 'There is a 31% average attrition rate among employees who worked overtime,<br>while there is a 10% average attrition rate among employees who did not work overtime.'
@@ -1330,17 +1332,17 @@ def update_promotion_chart(last_promotion_selected):
 
     fig_promotion.update_layout(
     transition_duration=500,
-    margin=dict(l=20, r=20, t=70, b=90),
+    # margin=dict(l=20, r=20, t=70, b=90),
     paper_bgcolor="LightSteelBlue",
-    font=dict(size=12),
+    # font=dict(size=12),
     font_color="black",
     title_font_color="black",
-    title_font=dict(size=16),
+    # title_font=dict(size=16),
     legend_title_font_color="black",
     legend_title_text="Attrition",
     title_x=0.5, #centers the chart title
     xaxis_title="Years at Company",
-    yaxis_title="Count"
+    yaxis_title="Count",
     )
 
     # Set variable to Total Count of 2 years in current role
@@ -1359,6 +1361,7 @@ def update_promotion_chart(last_promotion_selected):
         yref='paper',
         y=-0.30,
         align="center",
+        height=350,
         )
 
     return fig_promotion
@@ -1397,6 +1400,7 @@ def update_commute_chart(commute_group_selected):
     xaxis_title="Rate of Attrition",
     yaxis_title="Commute Distance",
     xaxis_tickformat = '%', #Adds % sign to xaxis ticks
+    height=350,
     )
 
     # fig_commute_note = 'Based on commute distance, the highest rate of attrition is 21% for commutes over 20<br>miles, while commutes between 1 to 5 miles have the lowest average attrition rate at 14%.'
@@ -1456,7 +1460,8 @@ def display_area(x):
         dtick = 1,
         tickvals = [1,2,3,4], # Position of tick labels to rename
         ticktext = ['1: Low', "2: Medium", "3: High", "4: Very High"] # rename tick labels at positions [1,2,3,4]
-        )
+        ),
+    height=350,
     )
     
     return fig_satisfaction_area_chart
@@ -1503,6 +1508,7 @@ def update_figure(selected_dept):
     legend_title_font_color="black",
     title_x=0.5,
     xaxis_tickformat = '%',
+    height=350,
     )
 
     # fig100_note = 'Although Percent Breakout by Department indicates that R&D makes up the highest percentage of all employees who have<br>left the company, the average rate of attrition within R&D independently is 14%, compared to 21% for Sales and 19% for HR.'
@@ -1558,7 +1564,8 @@ def update_pie(dept_selection):
         # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Department",
-        title_x=0.5
+        title_x=0.5,
+        height=350,
     )
 
     # This adds annotation/caption to the chart
@@ -1610,7 +1617,8 @@ def update_pie(work_balance_selection):
         # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Work Life Balance Rating",
-        title_x=0.5
+        title_x=0.5,
+        height=350,
     )
 
     # This adds annotation/caption to the chart
@@ -1662,7 +1670,8 @@ def update_pie(perf_rating_selection):
         # title_font=dict(size=16),
         legend_title_font_color="black",
         legend_title_text="Performance Rating",
-        title_x=0.5
+        title_x=0.5,
+        height=350,
     )
 
     # This adds annotation/caption to the chart
@@ -1712,7 +1721,8 @@ def update_figure(selected_role):
     legend_title_font_color="black",
     title_x=0.5, #centers the chart title
     yaxis_title="Job Role",
-    xaxis_tickformat = '%',    
+    xaxis_tickformat = '%',
+    height=350
     )
 
     # figJobRole_note = 'The Sales Representative Role has the highest rate of attrition at 40%, followed by Laboratory Technician at 24% and Human Resources at 23%.'
